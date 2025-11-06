@@ -36,6 +36,13 @@
   gap: 40px;
 }
 
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
 
 .search-wrapp{
   display:flex;
