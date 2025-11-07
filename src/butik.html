@@ -4,6 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-handel - Butik</title>
+    <link rel="stylesheet" href="butik.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="mini-cart">
+      <div id="cart-top-panel">
+        <h2>Din varukorg</h2>
+        <button id="mini-cart-btn"></button>
+      </div>
+      <div id="cart-empty">
+        <h3>Din varukorg är tom!</h3>
+        <button>Börja shoppa</button>
+      </div>
+    </div>
+    <header class="main">
+      <div id="cart-container">
+        <div id="cart-counter"></div>
+        <button id="js-button"></button>
+      </div>
+    </header>
+    <main id="main-section">
+      <div id="product-container"></div>
+    </main>
+    <script type="module" src="js/butik.js"></script>
+  </body>
 </html>
