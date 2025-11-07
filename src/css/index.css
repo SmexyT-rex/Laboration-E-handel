@@ -36,14 +36,55 @@
   gap: 40px;
 }
 
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.search-wrapp{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background: rgba(7,16,41,0.03);            
+  padding:6px 10px;
+  min-width: 140px;              
+  border: 1px solid rgba(7,16,41,0.04);
+  border-radius: 30px;
+}
+
+.search-icon{ 
+  color: #111; 
+  opacity:0.9; 
+}
+
+.search-input{
+  border: none;
+  background: transparent;
+  color: #071029;          
+}
+
+
+.search-input::placeholder{ 
+  color: #9aa3ad; 
+  font-weight:500; 
+}
+
 
 
 
 @media (min-width: 769px) {
-  .hamburger-menu { display: none; }
+  .hamburger-menu { 
+    display: none; 
+  }
 }
 
 @media (max-width: 768px) {
+  .header-search {
+    display: none;
+  }
   .hamburger-menu {
     display: block;
     font-size: 1.8rem;
