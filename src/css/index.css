@@ -3,10 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-<<<<<<< Updated upstream
-=======
   font-family: "Lora", sans-serif;
->>>>>>> Stashed changes
 }
 
 html, body {
@@ -212,10 +209,6 @@ body {
     gap: 0;
   }
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
   .footer-brand {
     display: block;
     position: absolute;
