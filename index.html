@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lavelle</title>
+
     <link rel="stylesheet" href="./src/css/index.css" />
-    <link rel="stylesheet" href="src/css/stylehero.css" />
+    <link rel="stylesheet" href="./src/css/stylehero.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
   </head>
+
   <body>
     <header class="header">
       <div class="logo-container">
@@ -44,7 +46,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 fill="none"
-              />
+              ></path>
               <circle
                 cx="11"
                 cy="11"
@@ -54,7 +56,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 fill="none"
-              />
+              ></circle>
             </svg>
 
             <input
@@ -68,10 +70,44 @@
         </form>
       </div>
 
-      <div class="kundvagn"></div>
+      <div class="kundvagn">
+        <div id="cart-container">
+          <div id="cart-counter"></div>
+          <button id="cart-button"></button>
+        </div>
+      </div>
 
       <button class="hamburger-menu" aria-label="Meny">☰</button>
     </header>
+
+    <!-- Mini cart window -->
+    <div id="mini-cart-window">
+      <div id="cart-top-panel">
+        <h2>Din varukorg</h2>
+        <button id="cart-back-btn"></button>
+      </div>
+
+      <div id="mini-cart-products-container">
+        <div class="product-rect">
+          <img src="/src/img/brokenimg.png" alt="Produktbild" />
+
+          <section>
+            <h1>Mens Casual Premium Slim Fit T-Shirts</h1>
+            <p id="mini-cart-product-price">199</p>
+
+            <p id="mini-cart-quantity">Antal:</p>
+
+            <div id="mini-cart-actions">
+              <button id="mini-cart-remove-product"></button>
+              <button id="mini-cart-add-product"></button>
+            </div>
+
+            <p id="article-number">Art.nr: 1234567890</p>
+            <p id="mini-cart-stock-status">I lager</p>
+          </section>
+        </div>
+      </div>
+    </div>
 
     <!-- Hero section -->
     <section id="hero">
@@ -79,11 +115,16 @@
         <h1>Lavelle</h1>
         <p>Där stil möter kvalitet</p>
 
-        <button id="btn"><a href="src/butik.html">Upptäck mer</a></button>
+        <button id="btn">
+          <a href="src/butik.html">Upptäck mer</a>
+        </button>
       </div>
     </section>
+
+    <!-- Populära produkter -->
     <section class="image-section">
       <h2 class="rubrik">Populära produkter</h2>
+
       <div class="product-container">
         <div class="product-box">
           <div class="box">
@@ -139,7 +180,8 @@
       </div>
     </section>
 
-    <<footer class="site-footer">
+    <!-- Footer -->
+    <footer class="site-footer">
       <div class="footer-top">
         <div class="container footer-row">
           
@@ -176,5 +218,6 @@
       </div>
     </footer>
     <script src="./src/js/hamburgerMenu.js"></script>
+    <script type="module" src="./src/js/butik.js"></script>
   </body>
 </html>

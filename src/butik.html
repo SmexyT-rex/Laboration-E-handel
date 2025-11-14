@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="butik.css" />
   </head>
   <body>
-    <header class="header">
+    <!--     <header class="header">
       <div class="logo-container">
-        <img src="" alt="">
-         <a href="/" class="logo-title">E-handel</a>
+        <img src="" alt="" />
+        <a href="/" class="logo-title">E-handel</a>
       </div>
-     
+
       <nav class="navbar">
         <a href="/">Hem</a>
         <a href="./src/butik.html">Män</a>
@@ -24,40 +24,88 @@
 
       <div class="icon-container">
         <form class="header-search" role="search" aria-label="Sök i butiken">
-             <div class="search-wrapp">
-            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <circle cx="11" cy="11" r="5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <div class="search-wrapp">
+            <svg
+              class="search-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M21 21l-4.35-4.35"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+              <circle
+                cx="11"
+                cy="11"
+                r="5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
             </svg>
-        
-            <input id="q" name="q" class="search-input" type="search" placeholder="Sök..." />
+
+            <input
+              id="q"
+              name="q"
+              class="search-input"
+              type="search"
+              placeholder="Sök..."
+            />
           </div>
         </form>
       </div>
 
-      <div class="kundvagn">
-
-      </div>
+      <div class="kundvagn"></div>
 
       <button class="hamburger-menu" aria-label="Meny">☰</button>
-    </header>
+    </header> -->
 
-    <script src="./js/hamburgerMenu.js"></script>
+    <!--     <script src="./js/hamburgerMenu.js"></script> -->
 
-    <div id="mini-cart">
+    <div id="mini-cart-window">
       <div id="cart-top-panel">
         <h2>Din varukorg</h2>
-        <button id="mini-cart-btn"></button>
+        <button id="cart-back-btn"></button>
       </div>
-      <div id="cart-empty">
+      <!-- <div id="cart-empty">
         <h3>Din varukorg är tom!</h3>
         <button>Börja shoppa</button>
+      </div> -->
+      <div id="mini-cart-products-container">
+        <div class="product-rect">
+          <img src="img/brokenimg.png" />
+          <section>
+            <h1>Mens Casual Premium Slim Fit T-Shirts</h1>
+
+            <p id="mini-cart-product-price">199</p>
+
+            <p id="mini-cart-quantity">Antal:</p>
+            <div id="mini-cart-actions">
+              <button id="mini-cart-remove-product"></button
+              ><button id="mini-cart-add-product"></button>
+            </div>
+
+            <p id="article-number">Art.nr: 1234567890</p>
+            <p id="mini-cart-stock-status">I lager</p>
+          </section>
+        </div>
+
+        <!-- <button id="to-checkout-button">Till Kassan</button> -->
       </div>
     </div>
     <header class="main">
       <div id="cart-container">
         <div id="cart-counter"></div>
-        <button id="js-button"></button>
+        <button id="cart-button"></button>
       </div>
     </header>
     <main id="main-section">

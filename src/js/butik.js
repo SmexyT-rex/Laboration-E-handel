@@ -1,14 +1,16 @@
-const cart = document.getElementById("mini-cart");
-const button = document.getElementById("js-button");
-const miniCartButton = document.getElementById("mini-cart-btn");
+import { cart, addToCart, connectButtons } from "./cart.js";
+
+const siteCart = document.getElementById("mini-cart-window");
+const button = document.getElementById("cart-button");
+const cartBackButton = document.getElementById("cart-back-btn");
 const container = document.getElementById("product-container");
 
 button.addEventListener("click", () => {
-  cart.classList.toggle("active"); // toggles the class on/off
+  siteCart.classList.toggle("active"); // toggles the class on/off
 });
 
-miniCartButton.addEventListener("click", () => {
-  cart.classList.toggle("active"); // toggles the class on/off
+cartBackButton.addEventListener("click", () => {
+  siteCart.classList.toggle("active"); // toggles the class on/off
 });
 
 async function getData() {
@@ -20,6 +22,7 @@ async function getData() {
     }
 
     const res = await response.json();
+
     console.log(res);
 
     res.forEach((p) => {
@@ -28,13 +31,18 @@ async function getData() {
       <h3>${p.title}</h3>
       <img src="${p.image}" alt="${p.title}">
       <p class="price">Pris: ${p.price.toFixed(2)} €</p>
-      <p><button>Add to Cart</button></p>
+      <p><button class="js-add-to-cart" data-product-id="${
+        p.id
+      }">Add to Cart</button></p>
     `;
       el.classList.add("card");
       container.appendChild(el);
     });
+
+    connectButtons();
   } catch (error) {
     console.error(error.message);
   }
 }
+
 getData();
