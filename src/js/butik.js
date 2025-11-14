@@ -1,5 +1,3 @@
-//store.js
-
 import { cart, addToCart, connectButtons } from "./cart.js";
 
 const siteCart = document.getElementById("mini-cart-window");
@@ -24,6 +22,8 @@ async function getData() {
     }
 
     const res = await response.json();
+
+    console.log(res);
 
     res.forEach((p) => {
       const el = document.createElement("div");
