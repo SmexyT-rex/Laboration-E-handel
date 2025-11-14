@@ -1,12 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+<<<<<<< Updated upstream
+=======
+  font-family: "Lora", sans-serif;
+>>>>>>> Stashed changes
 }
 
-
 html, body {
-  height: 100%;
+  margin: auto;
 }
 
 body {
@@ -52,7 +56,6 @@ body {
   gap: 30px;
 }
 
-
 .search-wrapp{
   display:flex;
   align-items:center;
@@ -75,17 +78,14 @@ body {
   color: #071029;
 }
 
-
 .search-input::placeholder{
   color: #9aa3ad;
   font-weight:500;
 }
 
-
 #main-section {
   flex: 1;
 }
-
 
 /* Footer sektion*/
 .site-footer {
@@ -95,7 +95,6 @@ body {
   font-size: 14px;
   font-weight: 300;
 }
-
 
 .footer-top {
   padding: 16px 24px;
@@ -114,7 +113,6 @@ body {
   justify-content: space-between;
   position: relative;
 }
-
 
 .footer-nav {
   display: flex;
@@ -175,7 +173,6 @@ body {
   color: #6b7280;
 }
 
-
 .chevron {
   width: 16px;
   height: 16px;
@@ -183,7 +180,6 @@ body {
   vertical-align: middle;
   color: #111827;
 }
-
 
 .footer-bottom {
   border-top: 1px solid #e6e7e8;
@@ -202,11 +198,11 @@ body {
   font-weight: 300;
 }
 
-
-
-
-
 @media (min-width: 769px) {
+  * {
+  font-family: "Lora", sans-serif;
+}
+
   .hamburger-menu {
     display: none;
   }
@@ -216,7 +212,10 @@ body {
     gap: 0;
   }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   .footer-brand {
     display: block;
     position: absolute;
@@ -238,6 +237,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    * {
+  font-family: "Lora", sans-serif;
+}
   .header-search {
     display: none;
   }
@@ -260,9 +262,13 @@ body {
         gap: 20px;
         background-color: white;
         position: absolute;
-        top: 60px;
+        top: 59px;
         right: 0;
         left: 0;
         padding: 10px 0;
+    }
+
+    .navbar.show a {
+      margin-right: 12px;
     }
 }

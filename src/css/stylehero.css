@@ -1,4 +1,4 @@
-/* Hero section */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 #hero {
     width: 100%;
     height: 95vh;
@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 5%;
 }
 
 #hero-text {
@@ -44,6 +43,7 @@
 
 #btn a {
     color: black;
+    text-decoration: none;
 }
 
 /* Product section */
@@ -57,8 +57,8 @@
 
 .rubrik {
     color: #000000;
-    font-style: italic;
-    font-family: serif;
+    font-family: "Lora", sans-serif !important;
+    font-style:italic;
     font-size: 2rem;
     margin-bottom: 40px;
 }
@@ -70,7 +70,7 @@
     text-align: center;
 }
 
-.container {
+.product-container {   /* ← FIX: tidigare .container */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -132,11 +132,12 @@
     transform: scale(1.2);
 }
 
-/* Media quearies  */
+/* Media queries */
 @media (max-width: 768px) {
     #hero {
         height: 70vh;
-        width: 110%;
+        width: 100vw;
+        background-position: bottom;
     }
     #hero-text h1 {
         font-size: 28px;
@@ -152,8 +153,8 @@
 
 @media (max-width: 430px) {
     #hero {
-        height: 60vh;
-        width: 110%;
+        height: 50vh;
+        width: 100vw;
     }
     #hero-text h1 {
         font-size: 24px;
