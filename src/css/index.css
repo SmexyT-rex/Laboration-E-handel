@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Momo Signaturee", sans-serif;
 }
 
-.header { 
+.header {
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -19,7 +21,6 @@
   text-decoration: none;
   color: black;
 }
-
 
 .logo-container {
   display: flex;
@@ -43,41 +44,36 @@
   gap: 30px;
 }
 
-
-.search-wrapp{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  background: rgba(7,16,41,0.03);            
-  padding:6px 10px;
-  min-width: 140px;              
-  border: 1px solid rgba(7,16,41,0.04);
+.search-wrapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(7, 16, 41, 0.03);
+  padding: 6px 10px;
+  min-width: 140px;
+  border: 1px solid rgba(7, 16, 41, 0.04);
   border-radius: 30px;
 }
 
-.search-icon{ 
-  color: #111; 
-  opacity:0.9; 
+.search-icon {
+  color: #111;
+  opacity: 0.9;
 }
 
-.search-input{
+.search-input {
   border: none;
   background: transparent;
-  color: #071029;          
+  color: #071029;
 }
 
-
-.search-input::placeholder{ 
-  color: #9aa3ad; 
-  font-weight:500; 
+.search-input::placeholder {
+  color: #9aa3ad;
+  font-weight: 500;
 }
-
-
-
 
 @media (min-width: 769px) {
-  .hamburger-menu { 
-    display: none; 
+  .hamburger-menu {
+    display: none;
   }
 }
 
@@ -101,13 +97,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 20px;      
-    background-color: white; 
-    position: absolute;      
-    top: 60px;            
+    gap: 20px;
+    background-color: white;
+    position: absolute;
+    top: 60px;
     right: 0;
     left: 0;
     padding: 10px 0;
   }
-
 }
