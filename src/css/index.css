@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 
@@ -15,23 +15,20 @@ body {
   min-height: 100vh;
 }
 
-.header { 
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-bottom: solid 1px #e6e6e6;
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px;
+    background-color: white;
 }
 
 .header a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
-
 
 .logo-container {
   display: flex;
@@ -42,10 +39,10 @@ body {
 }
 
 .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .icon-container {
@@ -60,28 +57,28 @@ body {
   display:flex;
   align-items:center;
   gap:8px;
-  background: rgba(7,16,41,0.03);            
+  background: rgba(7,16,41,0.03);
   padding:6px 10px;
-  min-width: 140px;              
+  min-width: 140px;
   border: 1px solid rgba(7,16,41,0.04);
   border-radius: 30px;
 }
 
-.search-icon{ 
-  color: #111; 
-  opacity:0.9; 
+.search-icon{
+  color: #111;
+  opacity:0.9;
 }
 
 .search-input{
   border: none;
   background: transparent;
-  color: #071029;          
+  color: #071029;
 }
 
 
-.search-input::placeholder{ 
-  color: #9aa3ad; 
-  font-weight:500; 
+.search-input::placeholder{
+  color: #9aa3ad;
+  font-weight:500;
 }
 
 
@@ -210,8 +207,8 @@ body {
 
 
 @media (min-width: 769px) {
-  .hamburger-menu { 
-    display: none; 
+  .hamburger-menu {
+    display: none;
   }
   .footer-row {
     flex-direction: row;
@@ -219,7 +216,7 @@ body {
     gap: 0;
   }
 
-  
+
   .footer-brand {
     display: block;
     position: absolute;
@@ -252,21 +249,20 @@ body {
     cursor: pointer;
   }
 
-  .navbar {
-    display: none;
-  }
+    .navbar {
+        display: none;
+    }
 
-  .navbar.show {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 20px;      
-    background-color: white; 
-    position: absolute;      
-    top: 60px;            
-    right: 0;
-    left: 0;
-    padding: 10px 0;
-  }
-
+    .navbar.show {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        padding: 10px 0;
+    }
 }
