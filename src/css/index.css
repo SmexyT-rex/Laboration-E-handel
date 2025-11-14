@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 
@@ -216,7 +216,7 @@ body {
     gap: 0;
   }
 
-  
+
   .footer-brand {
     display: block;
     position: absolute;
