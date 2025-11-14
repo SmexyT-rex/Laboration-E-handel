@@ -4,51 +4,148 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/css/stylehero.css" />
-        <title>E-handel</title>
-    <link rel="stylesheet" href="./src/css/index.css">
+        <title>Lavelle</title>
+        <link rel="stylesheet" href="./src/css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        />
     </head>
     <body>
-    <header class="header">
-      <div class="logo-container">
-        <img src="" alt="">
-         <a href="/" class="logo-title">E-handel</a>
-      </div>
+        <header class="header">
+            <div class="logo-container">
+                <img src="" alt="" />
+                <a href="/" class="logo-title">Lavelle</a>
+            </div>
 
-      <nav class="navbar">
-        <a href="/">Hem</a>
-        <a href="./src/butik.html">Män</a>
-        <a href="./src/butik.html">Kvinnor</a>
-        <a href="./src/butik.html">Smycken</a>
-        <a href="./src/butik.html">Elektronik</a>
-      </nav>
+            <nav class="navbar">
+                <a href="/">Hem</a>
+                <a href="./src/butik.html">Män</a>
+                <a href="./src/butik.html">Kvinnor</a>
+                <a href="./src/butik.html">Smycken</a>
+                <a href="./src/butik.html">Elektronik</a>
+            </nav>
 
-      <div class="icon-container">
-        <form class="header-search" role="search" aria-label="Sök i butiken">
-             <div class="search-wrapp">
-            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <circle cx="11" cy="11" r="5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            </svg>
-        
-            <input id="q" name="q" class="search-input" type="search" placeholder="Sök..." />
-          </div>
-        </form>
-      </div>
+            <div class="icon-container">
+                <form
+                    class="header-search"
+                    role="search"
+                    aria-label="Sök i butiken"
+                >
+                    <div class="search-wrapp">
+                        <svg
+                            class="search-icon"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path
+                                d="M21 21l-4.35-4.35"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                fill="none"
+                            />
+                            <circle
+                                cx="11"
+                                cy="11"
+                                r="5"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                fill="none"
+                            />
+                        </svg>
 
-      <div class="kundvagn">
+                        <input
+                            id="q"
+                            name="q"
+                            class="search-input"
+                            type="search"
+                            placeholder="Sök..."
+                        />
+                    </div>
+                </form>
+            </div>
 
-      </div>
+            <div class="kundvagn"></div>
 
-      <button class="hamburger-menu" aria-label="Meny">☰</button>
-    </header>
+            <button class="hamburger-menu" aria-label="Meny">☰</button>
+        </header>
 
-    <script src="./src/js/hamburgerMenu.js"></script>
+        <script src="./src/js/hamburgerMenu.js"></script>
 
         <!-- Hero section -->
         <section id="hero">
             <div id="hero-text">
-                <h1>E-HANDEL</h1>
-                <p>Hej och välkommen</p>
+                <h1>LAVELLE</h1>
+                <p>Där stil möter kvalitet</p>
+
+                <button id="btn">
+                    <a href="src/butik.html">Upptäck mer</a>
+                </button>
+            </div>
+        </section>
+
+        <!-- Product section -->
+        <section class="image-section">
+            <h2 class="rubrik">POPULÄRA PRODUKTER</h2>
+            <div class="container">
+                <div class="product-box">
+                    <div class="box">
+                        <img src="/src/img/ring.png" alt="Produkt" />
+                    </div>
+                    <div class="product-row">
+                        <div class="text-column">
+                            <h3>Ring</h3>
+                            <p class="price">5000 kr</p>
+                        </div>
+                        <i class="bi bi-cart-plus"></i>
+                    </div>
+                </div>
+
+                <div class="product-box">
+                    <div class="box">
+                        <img src="/src/img/ring.png" alt="Produkt" />
+                    </div>
+                    <div class="product-row">
+                        <div class="text-column">
+                            <h3>Ring</h3>
+                            <p class="price">5000 kr</p>
+                        </div>
+                        <i class="bi bi-cart-plus"></i>
+                    </div>
+                </div>
+
+                <div class="product-box">
+                    <div class="box">
+                        <img src="/src/img/ring.png" alt="Produkt" />
+                    </div>
+                    <div class="product-row">
+                        <div class="text-column">
+                            <h3>Ring</h3>
+                            <p class="price">5000 kr</p>
+                        </div>
+                        <i class="bi bi-cart-plus"></i>
+                    </div>
+                </div>
+
+                <div class="product-box">
+                    <div class="box">
+                        <img src="/src/img/ring.png" alt="Produkt" />
+                    </div>
+                    <div class="product-row">
+                        <div class="text-column">
+                            <h3>Ring</h3>
+                            <p class="price">5000 kr</p>
+                        </div>
+                        <i class="bi bi-cart-plus"></i>
+                    </div>
+                </div>
             </div>
         </section>
     </body>
