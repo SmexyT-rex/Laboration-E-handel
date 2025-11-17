@@ -8,6 +8,17 @@ export function connectButtons() {
   });
 }
 
+export function fetchCart() {
+  let gurka = (cart = { id: 1, userId: 1, products: [] });
+  fetch("https://fakestoreapi.com/carts", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(cart),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+}
+
 export let cart = [];
 
 export function addToCart(productId) {

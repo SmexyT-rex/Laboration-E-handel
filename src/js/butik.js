@@ -36,8 +36,10 @@ async function getData() {
             <div class="text-column">
               <h3>${p.title}</h3>
               <p class="price">${(Number(p.price) * 10).toFixed(2)}kr</p>
+
             </div>
             <i class="bi bi-cart-plus"></i>
+
     `;
         el.classList.add("product-box");
         container.appendChild(el);
