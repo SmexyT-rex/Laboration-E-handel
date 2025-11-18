@@ -3,46 +3,31 @@ export function connectButtons() {
 
   buttonsArray.forEach((button) => {
     button.addEventListener("click", () => {
-      addToCart(parseInt(button.dataset.productId));
+      const id = Number(button.dataset.productid);
+      console.log(id);
+      addToCart(id);
     });
   });
-}
-
-export function fetchCart() {
-  let gurka = (cart = { id: 1, userId: 1, products: [] });
-  fetch("https://fakestoreapi.com/carts", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(cart),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
 }
 
 export let cart = [];
 
 export function addToCart(productId) {
-  let matchingItem;
-
-  cart.forEach((item) => {
-    if (productId === item.productId) {
-      matchingItem = item;
-    }
-  });
+  let matchingItem = cart.find((item) => item.productId === productId);
 
   if (matchingItem) {
     matchingItem.quantity += 1;
   } else {
     cart.push({
-      productId: productId,
+      productId,
       quantity: 1,
     });
   }
 
-  let cartQuantity = 0;
-
   cart.forEach((item) => {
-    cartQuantity += item.quantity;
+    const productToRender = productArray.find(
+      (product) => product.id === item.productId
+    );
+    console.log("Render:", productToRender, "Quantity:", item.quantity);
   });
-  document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
 }
