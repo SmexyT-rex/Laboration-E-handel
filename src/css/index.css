@@ -72,7 +72,6 @@
 #cart-top-panel {
   display: flex;
   background-color: rgb(255, 255, 255);
-  border: solid 2px red;
   padding: 20px 10px 20px;
   width: 30rem;
   min-width: 400px;
@@ -489,4 +488,22 @@ body {
     .navbar.show a {
       margin-right: 12px;
     }
+}
+
+.added-animation {
+  animation: popIn 0.4s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
