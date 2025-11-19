@@ -1,3 +1,4 @@
+import { postCurrentCart } from "./cart.js";
 // -------------------------
 // ELEMENTS
 // -------------------------
@@ -13,7 +14,7 @@ const miniCartProductContainer = document.getElementById(
 // STATE
 // -------------------------
 let productArray = [];
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+export let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // -------------------------
 // CART TOGGLING
@@ -95,6 +96,7 @@ function addToCart(productId) {
     cart.push({ productId, quantity: 1 });
   }
   renderCart();
+  postCurrentCart();
 }
 
 // -------------------------
@@ -116,6 +118,7 @@ function changeQuantity(productId, delta) {
   if (item.quantity <= 0) removeFromCart(productId);
 
   renderCart();
+  postCurrentCart();
 }
 
 // -------------------------
@@ -124,10 +127,12 @@ function changeQuantity(productId, delta) {
 function renderCart() {
   miniCartProductContainer.innerHTML = "";
   const cartCounter = document.getElementById("cart-counter");
+  const totalContainer = document.getElementById("mini-cart-total-container");
+  const toCheckOutButton = document.querySelector("#to-checkout-container");
+  let total = 0;
 
   if (cart.length === 0) {
-    // Render empty cart message
-
+    toCheckOutButton.style.display = "none";
     const emptyEl = document.createElement("div");
     cartCounter.style.display = "none";
     emptyEl.classList.add("empty-cart");
@@ -137,10 +142,12 @@ function renderCart() {
     `;
     miniCartProductContainer.appendChild(emptyEl);
   } else {
+    toCheckOutButton.style.display = "block";
     cartCounter.style.display = "block";
     cart.forEach((item) => {
       const cartItem = productArray.find((p) => p.id === item.productId);
       if (!cartItem) return;
+      total += Number(cartItem.price) * 10 * item.quantity;
 
       const el = document.createElement("div");
       el.classList.add("product-rect", "added-animation");
@@ -180,7 +187,9 @@ function renderCart() {
       miniCartProductContainer.appendChild(el);
     });
   }
-
+  totalContainer.querySelector("p").textContent = `Totalt: ${total.toFixed(
+    2
+  )} kr`;
   // Save cart to localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
 }

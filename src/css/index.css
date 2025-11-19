@@ -527,7 +527,7 @@ body {
   padding: 2rem;
   gap: 1rem;
   color: #555;
-  font-family: 'Arial', sans-serif;
+
   font-size: 1rem;
   background-color: #f9f9f9;
   border-radius: 12px;
@@ -549,10 +549,12 @@ body {
 
 #to-checkout-container {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  z-index: 10; /* on top of product list */
+  background-color: white;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #to-checkout-container button {
