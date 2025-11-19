@@ -15,12 +15,12 @@
 }
 
 #cart-counter {
-  display:none;
+  display: none;
   position: absolute;
   top: -3px;
   right: -3px;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   background-color: red;
   border-radius: 50%;
 }
@@ -108,21 +108,26 @@
 
 #mini-cart-products-container {
   width: 30rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  overflow-y: scroll;
+  padding-bottom: 150px;
 }
 
 .product-rect {
-  display: flex;
-  width: 100%;
-  padding: 1rem;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    align-items: flex-start;
 }
 
-.product-rect img {
-  height: 7.5rem;
-  width: auto;
-  object-fit: fill;
+.product-rect img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
 }
 
 .product-rect section {
@@ -511,4 +516,64 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1rem;
+  color: #555;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  border: 1px dashed #ccc;
+  margin: 1rem;
+  min-height: 150px;
+}
+
+.empty-cart p:first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.empty-cart p:last-child {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+#to-checkout-container {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 10; /* on top of product list */
+}
+
+#to-checkout-container button {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#to-checkout-container button:hover {
+  background-color: #ff3b2e;
+  transform: scale(1.02);
+}
+
+#to-checkout-container button:active {
+  transform: scale(0.98);
 }

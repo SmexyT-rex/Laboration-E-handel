@@ -123,48 +123,63 @@ function changeQuantity(productId, delta) {
 // -------------------------
 function renderCart() {
   miniCartProductContainer.innerHTML = "";
+  const cartCounter = document.getElementById("cart-counter");
 
-  cart.forEach((item) => {
-    const cartItem = productArray.find((p) => p.id === item.productId);
-    if (!cartItem) return;
+  if (cart.length === 0) {
+    // Render empty cart message
 
-    const el = document.createElement("div");
-    el.classList.add("product-rect", "added-animation");
-    el.innerHTML = `
-      <img class="mini-cart-product-image" src="${
-        cartItem.image
-      }" alt="Produktbild" />
-      <section>
-        <h1>${cartItem.title}</h1>
-        <p class="mini-cart-product-price">${(
-          Number(cartItem.price) * 10
-        ).toFixed(2)}kr</p>
-        <p class="mini-cart-quantity">Antal: ${item.quantity}</p>
-        <div class="mini-cart-actions">
-          <button id="mini-cart-remove-product"></button>
-          <button id="mini-cart-add-product"></button>
-        </div>
-        <p class="article-number">Art.nr: 1234567890</p>
-        <p class="mini-cart-stock-status">I lager</p>
-      </section>
+    const emptyEl = document.createElement("div");
+    cartCounter.style.display = "none";
+    emptyEl.classList.add("empty-cart");
+    emptyEl.innerHTML = `
+      <p>Varukorgen är tom.</p>
+      <p>Lägg till varor för att börja!</p>
     `;
+    miniCartProductContainer.appendChild(emptyEl);
+  } else {
+    cartCounter.style.display = "block";
+    cart.forEach((item) => {
+      const cartItem = productArray.find((p) => p.id === item.productId);
+      if (!cartItem) return;
 
-    // Button events inside mini cart
-    const removeBtn = el.querySelector("#mini-cart-remove-product");
-    const addBtn = el.querySelector("#mini-cart-add-product");
+      const el = document.createElement("div");
+      el.classList.add("product-rect", "added-animation");
+      el.innerHTML = `
+        <img id="mini-cart-product-image" src="${
+          cartItem.image
+        }" alt="Produktbild" />
+        <section>
+          <h1>${cartItem.title}</h1>
+          <p class="mini-cart-product-price">${(
+            Number(cartItem.price) * 10
+          ).toFixed(2)}kr</p>
+          <p class="mini-cart-quantity">Antal: ${item.quantity}</p>
+          <div class="mini-cart-actions">
+            <button id="mini-cart-remove-product"></button>
+            <button id="mini-cart-add-product"></button>
+          </div>
+          <p class="article-number">Art.nr: ${Math.floor(
+            Math.random() * 10000000
+          )}</p>
+          <p class="mini-cart-stock-status">I lager</p>
+        </section>
+      `;
 
-    removeBtn.addEventListener("click", () =>
-      changeQuantity(item.productId, -1)
-    );
-    addBtn.addEventListener("click", () => changeQuantity(item.productId, 1));
+      const removeBtn = el.querySelector("#mini-cart-remove-product");
+      const addBtn = el.querySelector("#mini-cart-add-product");
 
-    // Animation cleanup
-    el.addEventListener("animationend", () =>
-      el.classList.remove("added-animation")
-    );
+      removeBtn.addEventListener("click", () =>
+        changeQuantity(item.productId, -1)
+      );
+      addBtn.addEventListener("click", () => changeQuantity(item.productId, 1));
 
-    miniCartProductContainer.appendChild(el);
-  });
+      el.addEventListener("animationend", () =>
+        el.classList.remove("added-animation")
+      );
+
+      miniCartProductContainer.appendChild(el);
+    });
+  }
 
   // Save cart to localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
