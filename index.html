@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <link rel="stylesheet" href="./src/css/aboutus.css">
   </head>
 
   <body>
@@ -112,7 +113,6 @@
         </div>
       </div>
     </div>
-
     <!-- Hero section -->
     <section id="hero">
       <div id="hero-text">
@@ -128,8 +128,60 @@
     <!-- Populära produkter -->
     <section class="image-section">
       <h2 class="rubrik">Populära produkter</h2>
+<div class="product-container"></div>
+    </section>
 
-      <div class="product-container"></div>
+    <section class="about-lux" aria-labelledby="about-heading">
+      <div class="about-container">
+    
+        <!-- Full Bleed Image -->
+        <div class="about-image">
+          <img src="./src/img/hero6.jpg" alt="Lavelle fashion editorial">
+          <div class="about-image-badge">
+            <span class="brand-name">Lavelle</span>
+          </div>
+        </div>
+    
+        <!-- Minimal Text Content -->
+        <div class="about-text">
+          <h2 id="about-heading" class="about-title">
+            Där stil möter kvalitet
+          </h2>
+    
+          <p class="about-lead">
+            Varje plagg är skapat med omtanke. 
+            Minimalistiskt i design, beständigt i sin natur.
+          </p>
+    
+          <p class="about-tagline">
+            Tidlöst. Raffinerat. Ditt.
+          </p>
+    
+          <ul class="about-features">
+            <li class="feature">
+              <svg class="feature-icon" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Hållbart
+            </li>
+    
+            <li class="feature">
+              <svg class="feature-icon" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" fill="none" stroke-linecap="round"/>
+              </svg>
+              Kurerat
+            </li>
+    
+            <li class="feature">
+              <svg class="feature-icon" viewBox="0 0 24 24">
+                <path d="M12 2v20M2 12h20" stroke="currentColor" fill="none" stroke-linecap="round"/>
+              </svg>
+              Tidlöst
+            </li>
+          </ul>
+        </div>
+    
+      </div>
     </section>
 
     <!-- Footer -->
@@ -183,5 +235,8 @@
     </footer>
     <script src="./src/js/hamburgerMenu.js"></script>
     <script type="module" src="./src/js/butik.js"></script>
+    <script src="./src/js/index.js"></script>
+    <!-- Innan </body> -->
+<script src="./src/js/router.js"></script>
   </body>
 </html>

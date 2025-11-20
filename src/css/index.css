@@ -252,6 +252,7 @@ body {
 .header a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 .logo-container {
