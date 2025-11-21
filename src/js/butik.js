@@ -13,7 +13,7 @@ const miniCartProductContainer = document.getElementById(
 // -------------------------
 // STATE
 // -------------------------
-let productArray = [];
+export let productArray = [];
 export let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // -------------------------
@@ -190,8 +190,13 @@ function renderCart() {
   totalContainer.querySelector("p").textContent = `Totalt: ${total.toFixed(
     2
   )} kr`;
-  // Save cart to localStorage
+
   localStorage.setItem("cart", JSON.stringify(cart));
+
+  const checkoutBtn = document.getElementById("to-checkout-btn");
+  checkoutBtn.addEventListener("click", () => {
+    window.location.href = "kassa.html";
+  });
 }
 
 // -------------------------
