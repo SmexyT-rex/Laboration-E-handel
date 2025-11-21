@@ -202,4 +202,5 @@ function renderCart() {
 // -------------------------
 // INITIALIZE
 // -------------------------
+
 getData();
