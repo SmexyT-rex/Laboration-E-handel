@@ -150,11 +150,18 @@ c
 }
 
 .product-rect section h1 {
+  /* Existing properties */
   margin-block: 0;
   grid-area: headline;
   align-self: center;
   font-size: 1em;
 
+  /* New properties for two-line truncation */
+  display: -webkit-box; /* Required for the truncation to work in Webkit browsers */
+  -webkit-line-clamp: 2; /* Limits the content to 2 lines */
+  -webkit-box-orient: vertical; /* Stacks the lines vertically */
+  overflow: hidden; /* Hides the overflowing content */
+  text-overflow: ellipsis; /* Ensures the ellipsis appears (though primarily for single line) */
 }
 
 #mini-cart-product-price{

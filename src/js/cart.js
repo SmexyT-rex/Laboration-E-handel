@@ -1,37 +1,23 @@
-export function connectButtons() {
-  const buttonsArray = document.querySelectorAll(".js-add-to-cart");
+export async function postCurrentCart() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  buttonsArray.forEach((button) => {
-    button.addEventListener("click", () => {
-      addToCart(parseInt(button.dataset.productId));
-    });
-  });
-}
+  const apiCart = {
+    userId: 1,
+    products: cart.map((item) => ({
+      productId: item.productId,
+      quantity: item.quantity,
+    })),
+  };
 
-export let cart = [];
-
-export function addToCart(productId) {
-  let matchingItem;
-
-  cart.forEach((item) => {
-    if (productId === item.productId) {
-      matchingItem = item;
-    }
+  const response = await fetch("https://fakestoreapi.com/carts", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(apiCart),
   });
 
-  if (matchingItem) {
-    matchingItem.quantity += 1;
-  } else {
-    cart.push({
-      productId: productId,
-      quantity: 1,
-    });
-  }
+  if (!response.ok) throw new Error("Failed to create cart");
 
-  let cartQuantity = 0;
-
-  cart.forEach((item) => {
-    cartQuantity += item.quantity;
-  });
-  document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
+  const data = await response.json();
+  console.log(data);
+  return data;
 }
