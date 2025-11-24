@@ -35,9 +35,8 @@ function renderProductsFiltered(products) {
           <h3>${p.title}</h3>
           <p class="price">${(Number(p.price) * 10).toFixed(2)}kr</p>
         </div>
-        <button class="js-add-to-cart" data-productid="${p.id}">
-          <i class="bi bi-cart-plus"></i>
-        </button>
+        <i class="bi bi-cart-plus js-add-to-cart" data-productid="${p.id}"></i>
+
       </div>
     `;
 
