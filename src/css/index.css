@@ -86,7 +86,7 @@ main {
 #cart-button {
   width: 24px;
   height: 24px;
-  background: url("/src/img/shopping-bag.png") no-repeat center/contain;
+  background: url("../img/shopping-bag.png") no-repeat center/contain;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -120,7 +120,7 @@ main {
 #cart-back-btn {
   width: 64px;
   height: 64px;
-  background: url("/src/img/arrow-right.svg") no-repeat center/contain;
+  background: url("../img/arrow-right.svg") no-repeat center/contain;
   border: none;
   cursor: pointer;
 }
