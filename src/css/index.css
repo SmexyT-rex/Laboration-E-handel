@@ -66,27 +66,6 @@ main {
   justify-content: center;
 }
 
-.search-wrapp {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(7, 16, 41, 0.03);
-  border: 1px solid rgba(7, 16, 41, 0.04);
-  padding: 6px 10px;
-  border-radius: 30px;
-}
-
-.search-input {
-  border: none;
-  background: transparent;
-  color: #071029;
-}
-
-.search-input::placeholder {
-  color: #9aa3ad;
-  font-weight: 500;
-}
-
 /* Cart */
 #cart-container {
   position: relative;
@@ -324,6 +303,19 @@ main {
 #to-checkout-container button:active {
   transform: scale(0.98);
 }
+
+/* black friday banner */
+.black-friday-banner {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 
 /* Footer */
 .site-footer {
