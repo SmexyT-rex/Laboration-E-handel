@@ -141,7 +141,7 @@ main {
 #cart-back-btn {
   width: 64px;
   height: 64px;
-  background: url("/src/img/arrow-right.svg") no-repeat center/contain;
+  background: url("../img/arrow-right.svg") no-repeat center/contain;
   border: none;
   cursor: pointer;
 }
