@@ -8,6 +8,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 /* Kundvagn */
 #cart-container {
   position: relative;
@@ -241,13 +251,6 @@ ease;
   font-size: 16px;
 }
 
-/* Kundvagn */
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
 .header {
     display: flex;
@@ -285,6 +288,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  padding: 10px;
 }
 
 .search-wrapp{
@@ -470,13 +474,57 @@ body {
   .header-search {
     display: none;
   }
-  .hamburger-menu {
-    display: block;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
+  @media (max-width: 968px) {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+  
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem; /* jämnt avstånd mellan kundvagn och hamburger */
+    }
+  
+    .kundvagn {
+      position: relative;
+      padding-top: 3px;
+    }
+  
+    #cart-button {
+      width: 20px;
+      height: 20px;
+      background: url("/src/img/shopping-bag.png") no-repeat center center;
+      background-size: contain;
+      border: none;
+      cursor: pointer;
+    }
+  
+    #cart-counter {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      height: 14px;
+      width: 14px;
+      background-color: red;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.7rem;
+    }
+  
+    .hamburger-menu {
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
   }
+  
 
     .navbar {
         display: none;
@@ -485,7 +533,7 @@ body {
     .navbar.show {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         gap: 20px;
         background-color: white;
         position: absolute;
