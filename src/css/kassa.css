@@ -115,11 +115,11 @@
 }
 
 .increase {
-   background: url("/src/img/plus-circle-fill.svg") no-repeat center/contain;
+   background: url("../img/plus-circle-fill.svg") no-repeat center/contain;
   }
 
 .decrease {
-  background: url("/src/img/dash-circle-fill.svg") no-repeat center/contain;
+  background: url("../img/dash-circle-fill.svg") no-repeat center/contain;
 }
 
 
