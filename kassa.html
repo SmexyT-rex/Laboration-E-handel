@@ -76,75 +76,78 @@
         <button class="hamburger-menu" aria-label="Meny">☰</button>
       </div>
     </header>
-    <div class="checkout-container">
-      <!-- Billing Form -->
-      <div class="billing">
-        <h2>Dina uppgifter</h2>
-        <form>
-          <label for="name">För- och efternamn</label>
-          <input type="text" id="name" placeholder="Sven Svensson" required />
-
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="john@exempel.com"
-            required
-          />
-
-          <label for="phone">Telefon</label>
-          <input
-            type="tel"
-            id="phone"
-            placeholder="+46 123 45 67 89"
-            required
-          />
-
-          <label for="address">Adress</label>
-          <input type="text" id="adress" placeholder="Gatuvägen 1" required />
-
-          <label for="city">Stad</label>
-          <input type="text" id="stad" placeholder="Exempeltorp" required />
-
-          <label for="country">Land</label>
-          <select id="country" required>
-            <option value="">Välj land</option>
-            <option value="Sverige">Sverige</option>
-            <option value="Kanada">Kanada</option>
-            <option value="Tyskland">Tyskland</option>
-            <option value="Annat">Other</option>
-          </select>
-
-          <label for="zip">Postnummer</label>
-          <input type="number" id="zip" placeholder="100 01" required />
-        </form>
-      </div>
-
-      <div class="order-summary">
-        <h2>Varukorg</h2>
-        <div id="order-summary-product-container">
-          <div class="order-item">
-            <img
-              src="product-image.jpg"
-              alt="Product Name"
-              class="product-image"
+    <main>
+      <div class="checkout-container">
+        <!-- Billing Form -->
+        <div class="billing">
+          <h2>Dina uppgifter</h2>
+          <form>
+            <label for="name">För- och efternamn</label>
+            <input type="text" id="name" placeholder="Sven Svensson" required />
+  
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="john@exempel.com"
+              required
             />
-            <div class="product-details">
-              <h4 class="product-title">Product Name</h4>
-              <p class="product-price">$29.99</p>
-            </div>
-            <div class="quantity-controls">
-              <button class="qty-btn decrease">-</button>
-              <span class="quantity">1</span>
-              <button class="qty-btn increase">+</button>
+  
+            <label for="phone">Telefon</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="+46 123 45 67 89"
+              required
+            />
+  
+            <label for="address">Adress</label>
+            <input type="text" id="adress" placeholder="Gatuvägen 1" required />
+  
+            <label for="city">Stad</label>
+            <input type="text" id="stad" placeholder="Exempeltorp" required />
+  
+            <label for="country">Land</label>
+            <select id="country" required>
+              <option value="">Välj land</option>
+              <option value="Sverige">Sverige</option>
+              <option value="Kanada">Kanada</option>
+              <option value="Tyskland">Tyskland</option>
+              <option value="Annat">Other</option>
+            </select>
+  
+            <label for="zip">Postnummer</label>
+            <input type="number" id="zip" placeholder="100 01" required />
+          </form>
+        </div>
+  
+        <div class="order-summary">
+          <h2>Varukorg</h2>
+          <div id="order-summary-product-container">
+            <div class="order-item">
+              <img
+                src="product-image.jpg"
+                alt="Product Name"
+                class="product-image"
+              />
+              <div class="product-details">
+                <h4 class="product-title">Product Name</h4>
+                <p class="product-price">$29.99</p>
+              </div>
+              <div class="quantity-controls">
+                <button class="qty-btn decrease">-</button>
+                <span class="quantity">1</span>
+                <button class="qty-btn increase">+</button>
+              </div>
             </div>
           </div>
+          <div class="total">Totalt:</div>
+          <button class="place-order-btn">Betala</button>
+          <button class="clear-cart-btn">Rensa varukorg</button>
         </div>
-        <div class="total">Totalt:</div>
-        <button class="place-order-btn">Betala</button>
-        <button class="clear-cart-btn">Rensa varukorg</button>
       </div>
-    </div>
+    </main>
+    
 
         <!-- Footer -->
         <footer class="site-footer">
