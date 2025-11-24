@@ -28,6 +28,7 @@
 }
 
 /* Design Button i hero section */
+
 #btn {
     display: inline-block;
     padding: 10px 20px;
@@ -39,7 +40,7 @@
     text-decoration: none;
     text-align: center;
     margin-top: 15px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #btn:hover {

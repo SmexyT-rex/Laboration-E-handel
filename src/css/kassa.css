@@ -103,7 +103,7 @@
 .qty-btn {
   width: 30px;
   height: 30px;
-  border: 1px solid #ddd;
+  border: none;
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -111,10 +111,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
 }
 
+.increase {
+   background: url("/src/img/plus-circle-fill.svg") no-repeat center/contain;
+  }
+
+.decrease {
+  background: url("/src/img/dash-circle-fill.svg") no-repeat center/contain;
+}
+
+
 .qty-btn:hover {
-  background-color: #f0f0f0;
+  transform: translateY(-2px);
 }
 
 .quantity {

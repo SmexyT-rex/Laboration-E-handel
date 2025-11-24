@@ -34,9 +34,9 @@ async function renderOrderSummary() {
         <p class="product-price">${(Number(item.price) * 10).toFixed(2)}kr</p>
       </div>
       <div class="quantity-controls">
-        <button class="qty-btn decrease" data-id="${item.id}">-</button>
+        <button class="qty-btn decrease" data-id="${item.id}"></button>
         <span class="quantity">${item.quantity}</span>
-        <button class="qty-btn increase" data-id="${item.id}">+</button>
+        <button class="qty-btn increase" data-id="${item.id}"></button>
       </div>
     `;
 
