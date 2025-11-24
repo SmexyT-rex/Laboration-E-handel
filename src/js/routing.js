@@ -20,7 +20,7 @@ function getCategoryFromQuery() {
 
 // Rendera produkter med samma layout som index.html
 function renderProductsFiltered(products) {
-  productsContainer.innerHTML = ""; // töm container
+  productsContainer.innerHTML = ""; 
 
   products.forEach(p => {
     const el = document.createElement("div");
