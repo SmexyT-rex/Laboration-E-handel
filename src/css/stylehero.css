@@ -70,7 +70,7 @@
     text-align: center;
 }
 
-.product-container {   /* ← FIX: tidigare .container */
+.product-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -122,12 +122,14 @@
     text-align: left;
     font-size: 22px;
     font-family: serif;
-    font-style: italic;
     font-weight: 500;
+
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .text-column .price {
