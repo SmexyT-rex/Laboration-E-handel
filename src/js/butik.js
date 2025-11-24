@@ -88,7 +88,7 @@ function connectButtons() {
 // -------------------------
 // ADD TO CART
 // -------------------------
-function addToCart(productId) {
+export function addToCart(productId) {
   const matchingItem = cart.find((item) => item.productId === productId);
   if (matchingItem) {
     matchingItem.quantity += 1;
@@ -124,7 +124,7 @@ function changeQuantity(productId, delta) {
 // -------------------------
 // RENDER CART
 // -------------------------
-function renderCart() {
+export function renderCart() {
   miniCartProductContainer.innerHTML = "";
   const cartCounter = document.getElementById("cart-counter");
   const totalContainer = document.getElementById("mini-cart-total-container");
