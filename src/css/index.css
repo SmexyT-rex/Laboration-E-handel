@@ -107,7 +107,7 @@ main {
 #cart-button {
   width: 24px;
   height: 24px;
-  background: url("/src/img/shopping-bag.png") no-repeat center/contain;
+  background: url("../img/shopping-bag.png") no-repeat center/contain;
   border: none;
   cursor: pointer;
   padding: 0;
