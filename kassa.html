@@ -5,8 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="src/css/kassa.css" />
+    <link rel="stylesheet" href="./src/css/index.css">
   </head>
   <body>
+    <header class="header">
+      <div class="logo-container">
+        <img src="" alt="" />
+        <a href="/" class="logo-title">LAVELLE</a>
+      </div>
+
+      <nav class="navbar">
+            <a href="index.html">Hem</a> 
+            <a href="routing.html?category=men">Män</a>
+            <a href="routing.html?category=women">Kvinnor</a>
+            <a href="routing.html?category=jewelery">Smycken</a>
+            <a href="routing.html?category=electronics">Elektronik</a>
+
+    </nav>
+
+      <div class="icon-container">
+        <form class="header-search" role="search" aria-label="Sök i butiken">
+          <div class="search-wrapp">
+            <svg
+              class="search-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M21 21l-4.35-4.35"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              ></path>
+              <circle
+                cx="11"
+                cy="11"
+                r="5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              ></circle>
+            </svg>
+
+            <input
+              id="q"
+              name="q"
+              class="search-input"
+              type="search"
+              placeholder="Sök..."
+            />
+          </div>
+        </form>
+      </div>
+      <!-- Kundvagn -->
+      <div class="icon-wrapper">
+        <div class="kundvagn">
+          <div id="cart-container">
+            <div id="cart-counter"></div>
+            <button id="cart-button"></button>
+          </div>
+        </div>
+      
+        <button class="hamburger-menu" aria-label="Meny">☰</button>
+      </div>
+    </header>
     <div class="checkout-container">
       <!-- Billing Form -->
       <div class="billing">
@@ -76,6 +145,56 @@
         <button class="clear-cart-btn">Rensa varukorg</button>
       </div>
     </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+          <div class="footer-top">
+            <div class="container footer-row">
+              <nav class="footer-nav" aria-label="Huvudmeny i footern">
+                <a href="#">Hem</a>
+                <a href="routing.html?category=men">Män</a>
+                <a href="routing.html?category=women">Kvinnor</a>
+                <a href="routing.html?category=jewelery">Smycken</a>
+                <a href="routing.html?category=electronics">Elektronik</a>  
+              </nav>
+    
+              <div class="footer-brand" aria-hidden="true">
+                <h2>LAVELLE</h2>
+              </div>
+    
+              <div class="footer-region">
+                <span class="muted">Country / Region</span>
+                <a href="#" class="region-link">
+                  <span>Sweden (English)</span>
+    
+                  <svg
+                    class="chevron"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M9 6l6 6-6 6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="footer-bottom">
+            <div class="container text-center">
+              <p>© 2025 Lavelle. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
     <script type="module" src="./src/js/kassa.js"></script>
   </body>
 </html>
