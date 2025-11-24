@@ -197,7 +197,6 @@ main {
 
 /* Cart products */
 #mini-cart-products-container {
-  width: 30rem;
   height: 100%;
   display: flex;
   flex-direction: column;

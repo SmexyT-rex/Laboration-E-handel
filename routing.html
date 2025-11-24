@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./src/img/letter-L orange.png" />
     <title>Lavelle - Kategori</title>
 
     <link rel="stylesheet" href="./src/css/index.css" />
     <link rel="stylesheet" href="./src/css/stylehero.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="./src/css/aboutus.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./src/css/aboutus.css" />
   </head>
 
   <body>
@@ -23,17 +27,46 @@
         <a href="routing.html?category=men">Män</a>
         <a href="routing.html?category=women">Kvinnor</a>
         <a href="routing.html?category=jewelery">Smycken</a>
-        <a href="routing.html?category=electronics">Elektronik</a>        
+        <a href="routing.html?category=electronics">Elektronik</a>
       </nav>
 
       <div class="icon-container">
         <form class="header-search" role="search" aria-label="Sök i butiken">
           <div class="search-wrapp">
-            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-              <circle cx="11" cy="11" r="5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></circle>
+            <svg
+              class="search-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M21 21l-4.35-4.35"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              ></path>
+              <circle
+                cx="11"
+                cy="11"
+                r="5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              ></circle>
             </svg>
-            <input id="q" name="q" class="search-input" type="search" placeholder="Sök..."/>
+            <input
+              id="q"
+              name="q"
+              class="search-input"
+              type="search"
+              placeholder="Sök..."
+            />
           </div>
         </form>
       </div>
@@ -45,10 +78,9 @@
             <button id="cart-button"></button>
           </div>
         </div>
-      
+
         <button class="hamburger-menu" aria-label="Meny">☰</button>
       </div>
-      
     </header>
 
     <div id="mini-cart-window">
@@ -69,8 +101,8 @@
         <h2 class="rubrik" id="category-title"></h2>
         <div id="products-container" class="product-container"></div>
       </section>
-    </main>    
-    
+    </main>
+
     <footer class="site-footer">
       <div class="footer-top">
         <div class="container footer-row">
@@ -79,7 +111,7 @@
             <a href="routing.html?category=men">Män</a>
             <a href="routing.html?category=women">Kvinnor</a>
             <a href="routing.html?category=jewelery">Smycken</a>
-            <a href="routing.html?category=electronics">Elektronik</a>  
+            <a href="routing.html?category=electronics">Elektronik</a>
           </nav>
           <div class="footer-brand" aria-hidden="true">
             <h2>LAVELLE</h2>
@@ -88,8 +120,22 @@
             <span class="muted">Country / Region</span>
             <a href="#" class="region-link">
               <span>Sweden (English)</span>
-              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg
+                class="chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M9 6l6 6-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </a>
           </div>
@@ -102,9 +148,8 @@
       </div>
     </footer>
 
-    
     <script src="./src/js/hamburgerMenu.js"></script>
     <script type="module" src="./src/js/butik.js"></script>
-    <script type="module" src="./src/js/routing.js"></script>    
+    <script type="module" src="./src/js/routing.js"></script>
   </body>
 </html>

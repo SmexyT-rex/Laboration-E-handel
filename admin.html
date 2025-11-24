@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/src/css/admin.css" />
-        <title>Admin</title>
-    </head>
-    <body>
-        <h1 class="header-text">Produkter</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/admin.css" />
+    <link rel="icon" type="image/x-icon" href="./src/img/letter-L orange.png" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <a href="index.html"><img src="./src/img/pilaroww.gif" /></a>
+    <h1 class="header-text">Produkter</h1>
 
-        <form id="product-form">
-            <input
-                type="text"
-                id="title"
-                placeholder="Skriv produkt titel:"
-                required
-            />
-            <input
-                type="number"
-                id="price"
-                placeholder="Skriv in pris:"
-                required
-            />
-            <button id="add-product" type="submit">Lägg till produkt</button>
-        </form>
+    <form id="product-form">
+      <input
+        type="text"
+        id="title"
+        placeholder="Skriv produkt titel:"
+        required
+      />
+      <input type="number" id="price" placeholder="Skriv in pris:" required />
+      <button id="add-product" type="submit">Lägg till produkt</button>
+    </form>
 
-        <div id="product-cards"></div>
+    <div id="product-cards"></div>
 
-        <script src="/src/js/admin.js"></script>
-    </body>
+    <script src="/src/js/admin.js"></script>
+  </body>
 </html>

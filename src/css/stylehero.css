@@ -58,7 +58,6 @@
 .rubrik {
     color: #000000;
     font-family: "Lora", sans-serif !important;
-    font-style:italic;
     font-size: 2rem;
     margin-bottom: 40px;
 }
@@ -119,6 +118,7 @@
 }
 
 .text-column h3 {
+    min-height: 50px;
     text-align: left;
     font-size: 22px;
     font-family: serif;
@@ -138,17 +138,11 @@
     font-style: italic;
 }
 
-
-/* .product-row i {
-    font-size: 20px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+.js-add-to-cart {
+    cursor: pointer
 }
 
-.product-row i:hover {
-    transform: scale(1.2);
-}
- */
+
 /* Media queries */
 @media (max-width: 768px) {
     #hero {

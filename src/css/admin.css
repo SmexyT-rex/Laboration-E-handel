@@ -99,3 +99,58 @@
 .delete-btn:hover {
     background-color: #ba879e;
 }
+
+
+@media (max-width: 1100px) {
+    .header-text {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    #product-form {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    #product-form input,
+    #product-form button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #product-cards {
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .product-images {
+        width: 140px;
+        height: 140px;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .catergory {
+        font-size: 1.1rem;
+        margin: .5em 0;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .delete-btn {
+        font-size: 16px;
+        width: 100%;
+        padding: 8px;
+    }
+}

@@ -32,7 +32,7 @@ cartBackButton.addEventListener("click", () => {
 // -------------------------
 async function getData() {
   try {
-    const response = await fetch("src/js/products.json");
+    const response = await fetch("https://fakestoreapi.com/products");
     if (!response.ok) throw new Error(`Response status: ${response.status}`);
     const res = await response.json();
     productArray = res;
@@ -63,10 +63,10 @@ function renderProducts() {
           <h3>${p.title}</h3>
           <p class="price">${(Number(p.price) * 10).toFixed(2)}kr</p>
         </div>
-        <button class="js-add-to-cart" data-productid="${p.id}">
-          <i class="bi bi-cart-plus"></i>
-        </button>
-      </div>
+          <i class="bi bi-cart-plus js-add-to-cart" data-productid="${
+            p.id
+          }"></i>
+              </div>
     `;
     container.appendChild(el);
   });

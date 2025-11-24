@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./src/img/letter-L orange.png" />
+    <title>Kassa - Lavelle</title>
     <link rel="stylesheet" href="src/css/kassa.css" />
-    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/index.css" />
   </head>
   <body>
     <header class="header">
@@ -15,13 +16,12 @@
       </div>
 
       <nav class="navbar">
-            <a href="index.html">Hem</a> 
-            <a href="routing.html?category=men">Män</a>
-            <a href="routing.html?category=women">Kvinnor</a>
-            <a href="routing.html?category=jewelery">Smycken</a>
-            <a href="routing.html?category=electronics">Elektronik</a>
-
-    </nav>
+        <a href="index.html">Hem</a>
+        <a href="routing.html?category=men">Män</a>
+        <a href="routing.html?category=women">Kvinnor</a>
+        <a href="routing.html?category=jewelery">Smycken</a>
+        <a href="routing.html?category=electronics">Elektronik</a>
+      </nav>
 
       <div class="icon-container">
         <form class="header-search" role="search" aria-label="Sök i butiken">
@@ -72,7 +72,7 @@
             <button id="cart-button"></button>
           </div>
         </div>
-      
+
         <button class="hamburger-menu" aria-label="Meny">☰</button>
       </div>
     </header>
@@ -84,7 +84,7 @@
           <form>
             <label for="name">För- och efternamn</label>
             <input type="text" id="name" placeholder="Sven Svensson" required />
-  
+
             <label for="email">Email</label>
             <input
               type="email"
@@ -92,7 +92,7 @@
               placeholder="john@exempel.com"
               required
             />
-  
+
             <label for="phone">Telefon</label>
             <input
               type="tel"
@@ -100,13 +100,13 @@
               placeholder="+46 123 45 67 89"
               required
             />
-  
+
             <label for="address">Adress</label>
             <input type="text" id="adress" placeholder="Gatuvägen 1" required />
-  
+
             <label for="city">Stad</label>
             <input type="text" id="stad" placeholder="Exempeltorp" required />
-  
+
             <label for="country">Land</label>
             <select id="country" required>
               <option value="">Välj land</option>
@@ -115,12 +115,12 @@
               <option value="Tyskland">Tyskland</option>
               <option value="Annat">Other</option>
             </select>
-  
+
             <label for="zip">Postnummer</label>
             <input type="number" id="zip" placeholder="100 01" required />
           </form>
         </div>
-  
+
         <div class="order-summary">
           <h2>Varukorg</h2>
           <div id="order-summary-product-container">
@@ -147,57 +147,56 @@
         </div>
       </div>
     </main>
-    
 
-        <!-- Footer -->
-        <footer class="site-footer">
-          <div class="footer-top">
-            <div class="container footer-row">
-              <nav class="footer-nav" aria-label="Huvudmeny i footern">
-                <a href="#">Hem</a>
-                <a href="routing.html?category=men">Män</a>
-                <a href="routing.html?category=women">Kvinnor</a>
-                <a href="routing.html?category=jewelery">Smycken</a>
-                <a href="routing.html?category=electronics">Elektronik</a>  
-              </nav>
-    
-              <div class="footer-brand" aria-hidden="true">
-                <h2>LAVELLE</h2>
-              </div>
-    
-              <div class="footer-region">
-                <span class="muted">Country / Region</span>
-                <a href="#" class="region-link">
-                  <span>Sweden (English)</span>
-    
-                  <svg
-                    class="chevron"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <path
-                      d="M9 6l6 6-6 6"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container footer-row">
+          <nav class="footer-nav" aria-label="Huvudmeny i footern">
+            <a href="#">Hem</a>
+            <a href="routing.html?category=men">Män</a>
+            <a href="routing.html?category=women">Kvinnor</a>
+            <a href="routing.html?category=jewelery">Smycken</a>
+            <a href="routing.html?category=electronics">Elektronik</a>
+          </nav>
+
+          <div class="footer-brand" aria-hidden="true">
+            <h2>LAVELLE</h2>
           </div>
-    
-          <div class="footer-bottom">
-            <div class="container text-center">
-              <p>© 2025 Lavelle. All rights reserved.</p>
-            </div>
+
+          <div class="footer-region">
+            <span class="muted">Country / Region</span>
+            <a href="#" class="region-link">
+              <span>Sweden (English)</span>
+
+              <svg
+                class="chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M9 6l6 6-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
           </div>
-        </footer>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container text-center">
+          <p>© 2025 Lavelle. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="./src/js/kassa.js"></script>
   </body>
 </html>
